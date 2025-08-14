@@ -1,0 +1,5 @@
+{
+  "name": "FBI Digital Command Center",
+  "description": "A web portal for the FBI faction based on the Digital Command Center concept.",
+  "requestFramePermissions": []
+}

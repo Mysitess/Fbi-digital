@@ -1,0 +1,61 @@
+/* --- Roster / Agent List --- */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.agent-card {
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.agent-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #00a8ff20;
+}
+
+.agent-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.agent-card-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+.agent-card-status {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.agent-card-status.on-duty {
+    background: var(--success-color);
+    color: white;
+}
+.agent-card-status.off-duty {
+    background: #495057;
+    color: white;
+}
+
+.agent-card-info {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.agent-card-info-head {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--warning-color);
+}

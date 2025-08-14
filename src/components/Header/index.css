@@ -1,0 +1,140 @@
+/* --- Header --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--secondary-bg);
+  border-bottom: 2px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.header-profile {
+  position: relative; /* For dropdown positioning */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-profile-name {
+    font-weight: bold;
+}
+
+.logout-button {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+.logout-button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    border-color: var(--accent-color);
+}
+
+/* --- Notification Bell --- */
+.notification-bell {
+    position: relative;
+}
+.notification-bell > button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+.notification-bell > button > svg {
+    width: 24px;
+    height: 24px;
+}
+.notification-bell > button:hover {
+    background-color: #ffffff20;
+}
+.notification-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: var(--danger-color);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--secondary-bg);
+    line-height: 1;
+}
+
+.notification-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 350px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: var(--sidebar-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+}
+.notification-dropdown-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+.notification-dropdown-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--accent-color);
+}
+.notification-dropdown p {
+    margin: 0;
+}
+
+.notification-item {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.notification-item:last-child {
+    border-bottom: none;
+}
+.notification-item:hover {
+    background-color: #2a3b50;
+}
+.notification-item p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+.notification-item span {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.nav-button.profile-button {
+  padding: 10px 15px;
+  border: 1px solid var(--border-color);
+}
+
+.nav-button.profile-button:hover,
+.nav-button.profile-button.active {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    border-color: var(--accent-color);
+    transform: translateX(0);
+}

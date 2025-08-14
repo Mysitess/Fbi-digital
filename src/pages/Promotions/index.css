@@ -1,0 +1,155 @@
+/* --- Promotions Page --- */
+.promotions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.rank-block {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    transition: box-shadow 0.2s;
+}
+.rank-block.is-editing:hover {
+    box-shadow: 0 0 10px var(--accent-color);
+}
+.rank-title, .rank-title-container {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 0 0 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.rank-title-input {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    flex-grow: 1;
+}
+.rank-requirements {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.rank-requirements li {
+    position: relative;
+    padding: 5px 0 5px 25px;
+    line-height: 1.5;
+}
+.rank-requirements li::before {
+    content: '»';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    top: 5px;
+}
+
+.probation-period {
+    color: var(--danger-color);
+    font-weight: bold;
+    margin-top: 10px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+}
+.probation-input {
+    width: 100%;
+    padding: 8px;
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--danger-color);
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+
+.editable-reqs {
+    width: 100%;
+    padding: 10px;
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    box-sizing: border-box;
+    min-height: 100px;
+    resize: vertical;
+}
+
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.block-actions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 8px;
+    background-color: rgba(10, 25, 47, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+}
+.block-actions button {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+.block-actions button:hover {
+    background-color: var(--accent-hover);
+}
+.block-actions button.delete-btn {
+    background-color: var(--danger-color);
+}
+.block-actions button.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.drag-handle {
+    cursor: grab;
+    color: var(--text-color);
+    opacity: 0.7;
+    padding: 0 5px;
+}
+.drag-handle:active {
+    cursor: grabbing;
+}
+.dragging {
+    opacity: 0.4;
+    border-style: dashed;
+}
+
+.add-item-button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+}

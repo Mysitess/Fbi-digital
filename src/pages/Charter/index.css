@@ -1,0 +1,101 @@
+/* --- Charter Page --- */
+.charter-page-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.charter-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px; /* Aligns with main content padding top */
+}
+
+.charter-main-content {
+    flex-grow: 1;
+    min-width: 0; /* Prevents flexbox overflow */
+}
+
+.charter-toc {
+    margin-bottom: 30px;
+}
+.charter-toc ul {
+    list-style-type: none;
+    padding: 0;
+}
+.charter-toc a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+.charter-toc a:hover {
+    color: var(--accent-color);
+    background-color: #00a8ff1a;
+}
+.charter-search {
+    margin-bottom: 20px;
+}
+.charter-search input {
+    width: 100%;
+    padding: 12px;
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+mark {
+    background-color: var(--warning-color);
+    color: var(--primary-bg);
+    padding: 0 2px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.charter-content section {
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    scroll-margin-top: 20px;
+}
+.charter-content section:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+.charter-content h2 {
+    color: var(--accent-color);
+}
+.charter-number {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.editable-reqs {
+    width: 100%;
+    padding: 10px;
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    box-sizing: border-box;
+    min-height: 100px;
+    resize: vertical;
+}
+
+@media (max-width: 1024px) {
+    .charter-page-layout {
+        flex-direction: column;
+    }
+    .charter-sidebar {
+        position: static;
+        width: 100%;
+    }
+}

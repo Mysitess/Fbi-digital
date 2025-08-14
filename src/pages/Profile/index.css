@@ -1,0 +1,67 @@
+/* --- Profile / Detail View --- */
+.profile-details p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+.profile-details strong {
+    color: var(--accent-color);
+    min-width: 120px;
+    display: inline-block;
+}
+.profile-actions {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.penalty-list {
+    list-style-type: none;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.penalty-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.penalty-list li:last-child {
+    border-bottom: none;
+}
+.penalty-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.report-status-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.status-pending {
+    background-color: var(--warning-color);
+    color: var(--primary-bg);
+}
+
+.status-approved {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.status-rejected {
+    background-color: var(--danger-color);
+    color: white;
+}

@@ -1,0 +1,3 @@
+/* This page uses shared styles from ContentPage and ProfilePage */
+@import url('../../components/ContentPage/index.css');
+@import url('../Profile/index.css');
